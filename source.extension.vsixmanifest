@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+    <Metadata>
+        <Identity Id="MidnightPurple2077Theme.f4ec4dad-7f86-4989-8eb0-ecacc2e097d1" Version="1.0" Language="en-US" Publisher="Romero, Marselino" />
+        <DisplayName>Midnight Purple 2077 Theme</DisplayName>
+        <Description xml:space="preserve">Awesome VSCode theme for those who code at night ported to Visual Studio.</Description>
+        <License>https://cybersamurai.gallerycdn.vsassets.io/extensions/cybersamurai/midnight-purple-2077/1.1.9/1671524041739/Microsoft.VisualStudio.Services.Content.License</License>
+        <ReleaseNotes>The credit for this theme belongs to cyber samurai</ReleaseNotes>
+        <Icon>Microsoft.VisualStudio.Services.Icons.png</Icon>
+        <PreviewImage>preview1.png</PreviewImage>
+        <Tags>color-theme, cyberpunk, 2077, dark theme, midnight, midnight purple, purple, theme</Tags>
+    </Metadata>
+    <Installation>
+        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0, 18.0)">
+            <ProductArchitecture>amd64</ProductArchitecture>
+        </InstallationTarget>
+    </Installation>
+    <Dependencies>
+        <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+    </Dependencies>
+    <Assets>
+        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="File" Path="Midnight Purple 2077.jsonc\Midnight Purple 2077.pkgdef" />
+    </Assets>
+    <Prerequisites>
+        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[17.0,18.0)" DisplayName="Visual Studio core editor" />
+    </Prerequisites>
+</PackageManifest>
