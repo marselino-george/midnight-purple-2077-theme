@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("MidnightPurple2077Theme")]
 [assembly: AssemblyDescription("A dark purple Visual Studio color theme inspired by Midnight Purple 2077.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Marcelino Jorge Romero")]
+[assembly: AssemblyCompany("marselino-george")]
 [assembly: AssemblyProduct("MidnightPurple2077Theme")]
 [assembly: AssemblyCopyright("Copyright (c) 2023 Tsolmon Nergui / Marselino-Georgios Romero")]
 [assembly: AssemblyTrademark("")]
@@ -29,5 +29,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.1.0.0")]
-[assembly: AssemblyFileVersion("1.1.0.0")]
+[assembly: AssemblyVersion("1.1.1.0")]
+[assembly: AssemblyFileVersion("1.1.1.0")]

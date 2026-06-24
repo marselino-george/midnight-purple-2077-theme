@@ -2,6 +2,11 @@
 
 All notable changes to this project are documented here.
 
+## 1.1.1 - 2026-06-24
+
+- Set the VSIX publisher identity and assembly company to `marselino-george`.
+- Kept Visual Studio 2022 and Visual Studio 2026 compatibility from `1.1.0`.
+
 ## 1.1.0 - 2026-06-24
 
 - Added explicit Visual Studio 2022 17.x and Visual Studio 2026 18.x support with `[17.0,19.0)` manifest ranges.
