@@ -2,6 +2,11 @@
 
 All notable changes to this project are documented here.
 
+## 1.1.4 - 2026-06-24
+
+- Changed the command-line publish manifest category from `tools` to `coding`, because `VsixPublisher.exe` rejects `tools` with `VsixPub0006`.
+- Kept the Marketplace `Themes` category guidance for web UI correction after CLI upload.
+
 ## 1.1.3 - 2026-06-24
 
 - Added `vs-publish.json` for Visual Studio Marketplace command-line publishing.

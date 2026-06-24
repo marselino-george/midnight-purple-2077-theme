@@ -86,7 +86,7 @@ The command-line publish manifest uses the existing Marketplace internal name:
 Marcelino-Jorge-Romero.midnight-purple-2077-theme
 ```
 
-Note: `VsixPublisher.exe` historically supports `tools` as a command-line category but not always the Marketplace UI's `Themes` category. If the Marketplace category changes after a CLI upload, restore `Themes` once from the web UI.
+Note: `VsixPublisher.exe` supports command-line categories such as `coding`, but not always the Marketplace UI's `Themes` category. If the Marketplace category changes after a CLI upload, restore `Themes` once from the web UI.
 
 ## Package Contents
 
