@@ -2,6 +2,12 @@
 
 All notable changes to this project are documented here.
 
+## 1.1.6 - 2026-06-25
+
+- Replaced the expanded Visual Studio 2026 Fluent shell token set from `1.1.5` with the official minimal dark-theme starter set.
+- Appended the `Shell` and `ShellInternal` categories at the end of the `.pkgdef`, matching Microsoft's migration guidance and avoiding VS2026 startup/window creation failures.
+- Kept the Visual Studio 2022 color categories unchanged.
+
 ## 1.1.5 - 2026-06-25
 
 - Added Visual Studio 2026 Fluent `Shell` and `ShellInternal` color tokens for the IDE chrome, including menu/command bars, tabs, buttons, borders, and status bar colors.
