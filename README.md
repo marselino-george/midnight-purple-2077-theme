@@ -13,7 +13,7 @@ A neon-purple dark theme for Visual Studio, inspired by Midnight Purple 2077 and
 
 The VSIX manifest intentionally targets `[17.0,19.0)` so the package supports Visual Studio 2022 and Visual Studio 2026 without claiming compatibility with future major versions that have not been tested.
 
-Visual Studio 2026 uses Fluent `Shell` and `ShellInternal` color tokens for the IDE chrome. This package includes the official minimal dark-theme starter set for those tokens, appended after the legacy categories as Microsoft recommends, while Visual Studio 2022 continues to use the existing legacy theme tokens.
+Visual Studio 2026 uses Fluent `Shell` and `ShellInternal` color tokens for some IDE chrome surfaces. This VSIX intentionally omits those binary `.pkgdef` categories for now because they caused startup window creation failures in VS2026 during testing. Visual Studio 2022 continues to use the existing legacy theme tokens, and the VSIX still targets VS2026 for install compatibility.
 
 ## Install
 
@@ -92,7 +92,7 @@ Note: `VsixPublisher.exe` supports command-line categories such as `coding`, but
 
 ## Package Contents
 
-The VSIX contains only the theme `.pkgdef`, marketplace icon, 200x200 preview image, license, and release notes. It does not include telemetry, network calls, commands, tool windows, or a runtime extension assembly. The `.pkgdef` carries the legacy Visual Studio 2022 color categories plus the conservative Visual Studio 2026 Fluent shell starter categories.
+The VSIX contains only the theme `.pkgdef`, marketplace icon, 200x200 preview image, license, and release notes. It does not include telemetry, network calls, commands, tool windows, or a runtime extension assembly. The `.pkgdef` carries the legacy Visual Studio color categories used by VS2022 and still accepted by VS2026.
 
 ## Marketplace Notes
 

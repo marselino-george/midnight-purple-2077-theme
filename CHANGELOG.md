@@ -2,6 +2,11 @@
 
 All notable changes to this project are documented here.
 
+## 1.1.7 - 2026-06-25
+
+- Removed the `Shell` and `ShellInternal` `.pkgdef` categories after VS2026 still failed to create its main window with the minimal Fluent shell token set from `1.1.6`.
+- Kept the VS2026 install target and the existing VS2022-compatible legacy theme categories so the extension can be installed safely while the VS2026 chrome-color path is investigated separately.
+
 ## 1.1.6 - 2026-06-25
 
 - Replaced the expanded Visual Studio 2026 Fluent shell token set from `1.1.5` with the official minimal dark-theme starter set.
