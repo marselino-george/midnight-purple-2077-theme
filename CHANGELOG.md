@@ -2,6 +2,13 @@
 
 All notable changes to this project are documented here.
 
+## 1.1.8 - 2026-06-25
+
+- Added an experimental side-by-side `Midnight Purple 2077 VS2026 Lab` package with a separate VSIX identity and theme GUID so it can be tested without replacing the public `1.1.7` Marketplace theme.
+- Restored the Visual Studio 2026 Fluent `Shell` and `ShellInternal` categories using the same 7-token `Shell` and 10-token `ShellInternal` shape used by VS2026 built-in tinted themes.
+- Added `scripts/Update-VS2026ShellLayer.ps1` to generate the binary `.pkgdef` shell data and validate that each category length header matches the actual byte count.
+- Kept the legacy Visual Studio 2022 theme categories intact for side-by-side comparison.
+
 ## 1.1.7 - 2026-06-25
 
 - Removed the `Shell` and `ShellInternal` `.pkgdef` categories after VS2026 still failed to create its main window with the minimal Fluent shell token set from `1.1.6`.

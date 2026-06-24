@@ -1,6 +1,6 @@
-# Midnight Purple 2077 Theme
+# Midnight Purple 2077 VS2026 Lab
 
-A neon-purple dark theme for Visual Studio, inspired by Midnight Purple 2077 and tuned for late-night coding.
+Experimental side-by-side Visual Studio 2026 chrome color test build for the Midnight Purple 2077 theme.
 
 ![Midnight Purple 2077 in Visual Studio](vspreview1.png)
 
@@ -13,7 +13,9 @@ A neon-purple dark theme for Visual Studio, inspired by Midnight Purple 2077 and
 
 The VSIX manifest intentionally targets `[17.0,19.0)` so the package supports Visual Studio 2022 and Visual Studio 2026 without claiming compatibility with future major versions that have not been tested.
 
-Visual Studio 2026 uses Fluent `Shell` and `ShellInternal` color tokens for some IDE chrome surfaces. This VSIX intentionally omits those binary `.pkgdef` categories for now because they caused startup window creation failures in VS2026 during testing. Visual Studio 2022 continues to use the existing legacy theme tokens, and the VSIX still targets VS2026 for install compatibility.
+This branch builds a lab VSIX with a separate extension identity and theme GUID from the public Marketplace package. It can be installed next to the public `Midnight Purple 2077 Theme` release for testing, and it appears in Visual Studio as `Midnight Purple 2077 VS2026 Lab`.
+
+Visual Studio 2026 uses Fluent `Shell` and `ShellInternal` color tokens for IDE chrome surfaces such as the main window frame, command bars, tabs, buttons, status bar, and tool window headers. This lab build restores those categories using the same 7-token `Shell` and 10-token `ShellInternal` shape used by the built-in VS2026 tinted themes, with corrected binary `.pkgdef` length headers.
 
 ## Install
 
@@ -25,10 +27,10 @@ For local testing, build the project and open:
 bin\Release\MidnightPurple2077Theme.vsix
 ```
 
-Then restart Visual Studio and select the theme from:
+Then restart Visual Studio and select the lab theme from:
 
 ```text
-Tools > Theme > Midnight Purple 2077
+Tools > Theme > Midnight Purple 2077 VS2026 Lab
 ```
 
 ## Build
@@ -53,11 +55,28 @@ The packaged theme is created at:
 bin\Release\MidnightPurple2077Theme.vsix
 ```
 
+## Regenerate VS2026 Shell Layer
+
+After changing the VS2026 chrome palette, regenerate and validate the binary `.pkgdef` shell data:
+
+```powershell
+.\scripts\Update-VS2026ShellLayer.ps1
+```
+
+The script validates the generated categories before it exits:
+
+```text
+Shell             7   257
+ShellInternal    10   326
+```
+
 ## Publish From Terminal
 
-Visual Studio Marketplace can be updated from the command line with `VsixPublisher.exe`.
+Do not publish this lab branch to the public Marketplace listing. The `Publish-Marketplace.ps1` script refuses a real publish while the VSIX manifest contains `VS2026 Lab`.
 
-Create a Visual Studio Marketplace/Azure DevOps PAT with Marketplace management permission, then run:
+Use the stable `master` branch for Marketplace updates. Once the VS2026 Lab package is tested locally, port the shell layer back to the public package, bump the public version, build, and publish from that stable branch.
+
+For the stable branch, Visual Studio Marketplace can be updated from the command line with `VsixPublisher.exe`. Create a Visual Studio Marketplace/Azure DevOps PAT with Marketplace management permission, then run:
 
 ```powershell
 .\scripts\Publish-Marketplace.ps1 -PersonalAccessToken "<PAT>"
@@ -92,11 +111,13 @@ Note: `VsixPublisher.exe` supports command-line categories such as `coding`, but
 
 ## Package Contents
 
-The VSIX contains only the theme `.pkgdef`, marketplace icon, 200x200 preview image, license, and release notes. It does not include telemetry, network calls, commands, tool windows, or a runtime extension assembly. The `.pkgdef` carries the legacy Visual Studio color categories used by VS2022 and still accepted by VS2026.
+The VSIX contains only the theme `.pkgdef`, marketplace icon, 200x200 preview image, license, and release notes. It does not include telemetry, network calls, commands, tool windows, or a runtime extension assembly. The `.pkgdef` carries the legacy Visual Studio color categories used by VS2022 plus the experimental VS2026 `Shell` and `ShellInternal` layer.
 
 ## Marketplace Notes
 
-- Marketplace publisher: `Marcelino-Jorge-Romero`
+- Lab VSIX identity: `MidnightPurple2077Theme.VS2026Lab.8db7c767-3ded-4c92-befa-c40152c6ac12`
+- Lab theme name: `Midnight Purple 2077 VS2026 Lab`
+- Stable Marketplace publisher: `Marcelino-Jorge-Romero`
 - GitHub repository owner: `marselino-george`
 - Type: Tools
 - Category: Theme
@@ -104,13 +125,13 @@ The VSIX contains only the theme `.pkgdef`, marketplace icon, 200x200 preview im
 - License: MIT, included as `LICENSE.txt`
 - Version: update `source.extension.vsixmanifest`, `Properties/AssemblyInfo.cs`, `ReleaseNotes.txt`, and `CHANGELOG.md` together.
 
-Recommended publish flow:
+Recommended test flow:
 
 1. Build `Release`.
-2. Install the generated VSIX locally in Visual Studio 2022 and Visual Studio 2026.
-3. Confirm the theme appears under `Tools > Theme`.
-4. Upload `bin\Release\MidnightPurple2077Theme.vsix` to Visual Studio Marketplace or run `.\scripts\Publish-Marketplace.ps1`.
-5. Mark the listing public after the Marketplace preview looks correct.
+2. Install the generated VSIX locally in Visual Studio 2026.
+3. Confirm `Midnight Purple 2077 VS2026 Lab` appears under `Tools > Theme`.
+4. Check the main menu, command bars, document tabs, status bar, and tool window headers.
+5. If the lab package opens cleanly and looks right, port the shell layer to the stable Marketplace identity and bump the public release version.
 
 ## Release Notes
 

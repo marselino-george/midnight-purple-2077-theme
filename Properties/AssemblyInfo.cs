@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MidnightPurple2077Theme")]
-[assembly: AssemblyDescription("A dark purple Visual Studio color theme inspired by Midnight Purple 2077.")]
+[assembly: AssemblyTitle("MidnightPurple2077Theme VS2026 Lab")]
+[assembly: AssemblyDescription("Experimental Visual Studio 2026 chrome color test build for Midnight Purple 2077.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Marcelino Jorge Romero")]
-[assembly: AssemblyProduct("MidnightPurple2077Theme")]
+[assembly: AssemblyProduct("MidnightPurple2077Theme VS2026 Lab")]
 [assembly: AssemblyCopyright("Copyright (c) 2023 Tsolmon Nergui / Marselino-Georgios Romero")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -29,5 +29,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.1.7.0")]
-[assembly: AssemblyFileVersion("1.1.7.0")]
+[assembly: AssemblyVersion("1.1.8.0")]
+[assembly: AssemblyFileVersion("1.1.8.0")]

@@ -14,6 +14,7 @@ $repoRoot = Split-Path -Parent $PSScriptRoot
 $projectPath = Join-Path $repoRoot "MidnightPurple2077Theme.csproj"
 $publishManifestPath = Join-Path $repoRoot "vs-publish.json"
 $vsixPath = Join-Path $repoRoot "bin\$Configuration\MidnightPurple2077Theme.vsix"
+$vsixManifestPath = Join-Path $repoRoot "source.extension.vsixmanifest"
 
 function Find-VsixPublisher {
     param([string]$ExplicitPath)
@@ -59,6 +60,11 @@ if (-not $SkipBuild) {
 
 if (-not (Test-Path -LiteralPath $vsixPath)) {
     throw "VSIX package was not found at '$vsixPath'. Build the project first or check -Configuration."
+}
+
+$vsixManifest = Get-Content -LiteralPath $vsixManifestPath -Raw
+if ($vsixManifest -match "VS2026 Lab" -and -not $WhatIfPreference) {
+    throw "This branch builds the side-by-side VS2026 Lab package. Do not publish it to the public Marketplace listing."
 }
 
 $publisher = Find-VsixPublisher -ExplicitPath $VsixPublisherPath

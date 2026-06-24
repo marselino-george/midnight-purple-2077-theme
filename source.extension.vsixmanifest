@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="MidnightPurple2077Theme.f4ec4dad-7f86-4989-8eb0-ecacc2e097d1" Version="1.1.7" Language="en-US" Publisher="Marcelino Jorge Romero" />
-        <DisplayName>Midnight Purple 2077 Theme</DisplayName>
-        <Description xml:space="preserve">A dark purple Visual Studio color theme inspired by Midnight Purple 2077 for night-time coding.</Description>
+        <Identity Id="MidnightPurple2077Theme.VS2026Lab.8db7c767-3ded-4c92-befa-c40152c6ac12" Version="1.1.8" Language="en-US" Publisher="Marcelino Jorge Romero" />
+        <DisplayName>Midnight Purple 2077 VS2026 Lab</DisplayName>
+        <Description xml:space="preserve">Experimental side-by-side Visual Studio 2026 chrome color test build for Midnight Purple 2077.</Description>
         <License>LICENSE.txt</License>
         <ReleaseNotes>ReleaseNotes.txt</ReleaseNotes>
         <Icon>Microsoft.VisualStudio.Services.Icons.png</Icon>
         <PreviewImage>MarketplacePreview.png</PreviewImage>
-        <Tags>color-theme;dark-theme;cyberpunk;midnight-purple;visual-studio-theme</Tags>
+        <Tags>color-theme;dark-theme;cyberpunk;midnight-purple;visual-studio-theme;vs2026-lab</Tags>
     </Metadata>
     <Installation>
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0,19.0)">
