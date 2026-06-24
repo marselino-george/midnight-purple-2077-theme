@@ -2,6 +2,12 @@
 
 All notable changes to this project are documented here.
 
+## 1.1.3 - 2026-06-24
+
+- Added `vs-publish.json` for Visual Studio Marketplace command-line publishing.
+- Added `scripts/Publish-Marketplace.ps1` to build the VSIX and publish it with `VsixPublisher.exe`.
+- Documented terminal publishing and the Marketplace category caveat for theme extensions.
+
 ## 1.1.2 - 2026-06-24
 
 - Restored the VSIX publisher identity to `Marcelino Jorge Romero` so updates target the existing Visual Studio Marketplace listing.

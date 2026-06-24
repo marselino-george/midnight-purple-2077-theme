@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json.schemastore.org/vsix-publish",
+  "publisher": "Marcelino-Jorge-Romero",
+  "identity": {
+    "internalName": "midnight-purple-2077-theme"
+  },
+  "overview": "README.md",
+  "categories": [
+    "tools"
+  ],
+  "priceCategory": "free",
+  "private": false,
+  "qna": true,
+  "repo": "https://github.com/marselino-george/midnight-purple-2077-theme",
+  "assetFiles": [
+    {
+      "pathOnDisk": "vspreview1.png",
+      "targetPath": "vspreview1.png"
+    }
+  ]
+}

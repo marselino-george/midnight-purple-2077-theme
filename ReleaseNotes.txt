@@ -1,8 +1,9 @@
-1.1.2
+1.1.3
 - Added explicit Visual Studio 2022 17.x and Visual Studio 2026 18.x compatibility.
 - Added AMD64 and ARM64 install targets.
 - Cleaned up Marketplace metadata, license, release notes, build tooling, and preview assets.
 - Preserved the existing Visual Studio Marketplace publisher identity for extension updates.
+- Added command-line publishing support through VsixPublisher.
 
 Credits
 - Original VS Code theme credit belongs to cyber samurai.

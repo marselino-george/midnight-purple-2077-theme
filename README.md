@@ -51,6 +51,43 @@ The packaged theme is created at:
 bin\Release\MidnightPurple2077Theme.vsix
 ```
 
+## Publish From Terminal
+
+Visual Studio Marketplace can be updated from the command line with `VsixPublisher.exe`.
+
+Create a Visual Studio Marketplace/Azure DevOps PAT with Marketplace management permission, then run:
+
+```powershell
+.\scripts\Publish-Marketplace.ps1 -PersonalAccessToken "<PAT>"
+```
+
+The script clean-builds `Release`, finds `VsixPublisher.exe`, and publishes:
+
+```text
+bin\Release\MidnightPurple2077Theme.vsix
+```
+
+You can also login once and omit the PAT:
+
+```powershell
+VsixPublisher.exe login -publisherName "Marcelino-Jorge-Romero" -personalAccessToken "<PAT>"
+.\scripts\Publish-Marketplace.ps1
+```
+
+To validate the build and command setup without publishing:
+
+```powershell
+.\scripts\Publish-Marketplace.ps1 -WhatIf
+```
+
+The command-line publish manifest uses the existing Marketplace internal name:
+
+```text
+Marcelino-Jorge-Romero.midnight-purple-2077-theme
+```
+
+Note: `VsixPublisher.exe` historically supports `tools` as a command-line category but not always the Marketplace UI's `Themes` category. If the Marketplace category changes after a CLI upload, restore `Themes` once from the web UI.
+
 ## Package Contents
 
 The VSIX contains only the theme `.pkgdef`, marketplace icon, 200x200 preview image, license, and release notes. It does not include telemetry, network calls, commands, tool windows, or a runtime extension assembly.
@@ -70,7 +107,7 @@ Recommended publish flow:
 1. Build `Release`.
 2. Install the generated VSIX locally in Visual Studio 2022 and Visual Studio 2026.
 3. Confirm the theme appears under `Tools > Theme`.
-4. Upload `bin\Release\MidnightPurple2077Theme.vsix` to Visual Studio Marketplace.
+4. Upload `bin\Release\MidnightPurple2077Theme.vsix` to Visual Studio Marketplace or run `.\scripts\Publish-Marketplace.ps1`.
 5. Mark the listing public after the Marketplace preview looks correct.
 
 ## Release Notes
