@@ -2,6 +2,11 @@
 
 All notable changes to this project are documented here.
 
+## 1.1.2 - 2026-06-24
+
+- Restored the VSIX publisher identity to `Marcelino Jorge Romero` so updates target the existing Visual Studio Marketplace listing.
+- Kept GitHub repository ownership and commit identity under `marselino-george`.
+
 ## 1.1.1 - 2026-06-24
 
 - Set the VSIX publisher identity and assembly company to `marselino-george`.

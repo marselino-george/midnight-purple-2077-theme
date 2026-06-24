@@ -57,7 +57,8 @@ The VSIX contains only the theme `.pkgdef`, marketplace icon, 200x200 preview im
 
 ## Marketplace Notes
 
-- Publisher: `marselino-george`
+- Marketplace publisher: `Marcelino-Jorge-Romero`
+- GitHub repository owner: `marselino-george`
 - Type: Tools
 - Category: Theme
 - Tags: `color-theme`, `dark-theme`, `cyberpunk`, `midnight-purple`, `visual-studio-theme`
