@@ -1,10 +1,11 @@
-1.1.4
+1.1.5
 - Added explicit Visual Studio 2022 17.x and Visual Studio 2026 18.x compatibility.
 - Added AMD64 and ARM64 install targets.
 - Cleaned up Marketplace metadata, license, release notes, build tooling, and preview assets.
 - Preserved the existing Visual Studio Marketplace publisher identity for extension updates.
 - Added command-line publishing support through VsixPublisher.
 - Updated the command-line publish category to a VsixPublisher-supported category.
+- Added Visual Studio 2026 Fluent Shell and ShellInternal color tokens so the menu, command bars, tabs, buttons, and status chrome follow the Midnight Purple palette.
 
 Credits
 - Original VS Code theme credit belongs to cyber samurai.

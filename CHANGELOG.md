@@ -2,6 +2,11 @@
 
 All notable changes to this project are documented here.
 
+## 1.1.5 - 2026-06-25
+
+- Added Visual Studio 2026 Fluent `Shell` and `ShellInternal` color tokens for the IDE chrome, including menu/command bars, tabs, buttons, borders, and status bar colors.
+- Kept the existing Visual Studio 2022 token set intact so the VS2022 appearance and install range remain compatible.
+
 ## 1.1.4 - 2026-06-24
 
 - Changed the command-line publish manifest category from `tools` to `coding`, because `VsixPublisher.exe` rejects `tools` with `VsixPub0006`.
