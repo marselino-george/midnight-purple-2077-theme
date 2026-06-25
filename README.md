@@ -13,7 +13,7 @@ A neon-purple dark theme for Visual Studio, inspired by Midnight Purple 2077 and
 
 The VSIX manifest intentionally targets `[17.0,19.0)` so the package supports Visual Studio 2022 and Visual Studio 2026 without claiming compatibility with future major versions that have not been tested.
 
-Visual Studio 2026 uses Fluent `Shell` and `ShellInternal` color tokens for some IDE chrome surfaces. This VSIX intentionally omits those binary `.pkgdef` categories for now because they caused startup window creation failures in VS2026 during testing. Visual Studio 2022 continues to use the existing legacy theme tokens, and the VSIX still targets VS2026 for install compatibility.
+Visual Studio 2026 uses Fluent `Shell` and `ShellInternal` color tokens for IDE chrome surfaces such as the main window frame, command bars, tabs, buttons, status bar, and tool window headers. This VSIX includes a tested full 94-token `Shell` and 28-token `ShellInternal` palette with validated binary `.pkgdef` length headers. Visual Studio 2022 continues to use the existing legacy theme tokens.
 
 ## Install
 
@@ -51,6 +51,21 @@ The packaged theme is created at:
 
 ```text
 bin\Release\MidnightPurple2077Theme.vsix
+```
+
+## Regenerate VS2026 Shell Layer
+
+After changing the VS2026 chrome palette, regenerate and validate the binary `.pkgdef` shell data:
+
+```powershell
+.\scripts\Update-VS2026ShellLayer.ps1
+```
+
+The script validates the generated categories before it exits:
+
+```text
+Shell            94  3091
+ShellInternal    28  1008
 ```
 
 ## Publish From Terminal
@@ -92,7 +107,7 @@ Note: `VsixPublisher.exe` supports command-line categories such as `coding`, but
 
 ## Package Contents
 
-The VSIX contains only the theme `.pkgdef`, marketplace icon, 200x200 preview image, license, and release notes. It does not include telemetry, network calls, commands, tool windows, or a runtime extension assembly. The `.pkgdef` carries the legacy Visual Studio color categories used by VS2022 and still accepted by VS2026.
+The VSIX contains only the theme `.pkgdef`, marketplace icon, 200x200 preview image, license, and release notes. It does not include telemetry, network calls, commands, tool windows, or a runtime extension assembly. The `.pkgdef` carries the legacy Visual Studio color categories used by VS2022 plus the Visual Studio 2026 Fluent `Shell` and `ShellInternal` chrome color layer.
 
 ## Marketplace Notes
 

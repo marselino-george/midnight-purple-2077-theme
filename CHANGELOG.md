@@ -2,6 +2,13 @@
 
 All notable changes to this project are documented here.
 
+## 1.2.0 - 2026-06-25
+
+- Added the tested Visual Studio 2026 Fluent `Shell` and `ShellInternal` color layer from the side-by-side lab build.
+- Expanded VS2026 chrome coverage to the full 94-token `Shell` and 28-token `ShellInternal` palette for menu/toolbar controls, tabs, status bar, shell headers, and related IDE chrome.
+- Added `scripts/Update-VS2026ShellLayer.ps1` to generate the binary `.pkgdef` shell data and validate that each category length header matches the actual byte count.
+- Kept the existing Visual Studio 2022 legacy theme categories and public Marketplace VSIX identity unchanged.
+
 ## 1.1.7 - 2026-06-25
 
 - Removed the `Shell` and `ShellInternal` `.pkgdef` categories after VS2026 still failed to create its main window with the minimal Fluent shell token set from `1.1.6`.
