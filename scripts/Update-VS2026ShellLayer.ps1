@@ -12,28 +12,136 @@ $darkFallbackGuid = "1ded0138-47ce-435e-84ef-9ec1f439b749"
 $shellGuid = "73708ded-2d56-4aad-b8eb-73b20d3f4bff"
 $shellInternalGuid = "5af241b7-5627-4d12-bfb1-2b67d11127d7"
 
-$shellTokens = @(
-    @{ Name = "AccentFillDefault"; Background = "#FF7C41C4" },
-    @{ Name = "AccentFillSecondary"; Background = "#E58D51D7" },
-    @{ Name = "AccentFillTertiary"; Background = "#CC613795" },
-    @{ Name = "SolidBackgroundFillTertiary"; Background = "#FF27163C" },
-    @{ Name = "SolidBackgroundFillQuaternary"; Background = "#FF2E1A47" },
-    @{ Name = "SurfaceBackgroundFillDefault"; Background = "#FF1D112D" },
-    @{ Name = "TextFillSecondary"; Background = "#D9F4F4F4" }
-)
+$shellTokenColors = [ordered]@{
+    AccentFillAlt = "#FF9F69E8"
+    AccentFillDefault = "#FF8D51D7"
+    AccentFillDisabled = "#66613795"
+    AccentFillSecondary = "#E58D51D7"
+    AccentFillSelectedTextBackground = "#FF613795"
+    AccentFillSelectedTextBackgroundSubtle = "#99613795"
+    AccentFillSenary = "#557C41C4"
+    AccentFillTertiary = "#CC7C41C4"
+    AccentTextFillDisabled = "#668D51D7"
+    AccentTextFillPrimary = "#FFC2E7FF"
+    AccentTextFillSecondary = "#E5C2E7FF"
+    AccentTextFillTertiary = "#B3C2E7FF"
+    CardBackgroundFillDefault = "#FF1A0F2A"
+    CardBackgroundFillSecondary = "#FF211335"
+    CardBackgroundFillTertiary = "#FF27163C"
+    CardStrokeDefault = "#667C41C4"
+    CardStrokeDefaultSolid = "#FF4C2C75"
+    CardStrokeDefaultSolidAlt = "#FF613795"
+    ControlAltFillDisabled = "#1AFFFFFF"
+    ControlAltFillQuaternary = "#334B2B73"
+    ControlAltFillSecondary = "#2627153D"
+    ControlAltFillTertiary = "#332E1A47"
+    ControlAltFillTransparent = "#00000000"
+    ControlFillActiveInput = "#FF211335"
+    ControlFillDefault = "#FF24153A"
+    ControlFillDisabled = "#2627153D"
+    ControlFillQuaternary = "#FF3A2159"
+    ControlFillSecondary = "#FF2B1944"
+    ControlFillTertiary = "#FF321D50"
+    ControlFillTransparent = "#00000000"
+    ControlOnImageFillDefault = "#CC130B1E"
+    ControlOnImageFillDisabled = "#4D130B1E"
+    ControlOnImageFillSecondary = "#99130B1E"
+    ControlOnImageFillTertiary = "#80130B1E"
+    ControlSolidFillDefault = "#FFF4F4F4"
+    ControlStrokeDefault = "#997C41C4"
+    ControlStrokeForStrongFillWhenOnImage = "#FFFFFFFF"
+    ControlStrokeOnAccentDefault = "#FFFFFFFF"
+    ControlStrokeOnAccentDisabled = "#66FFFFFF"
+    ControlStrokeOnAccentSecondary = "#B3FFFFFF"
+    ControlStrokeOnAccentTertiary = "#80FFFFFF"
+    ControlStrokeSecondary = "#667C41C4"
+    ControlStrokeTransparent = "#00000000"
+    ControlStrongFillDefault = "#FF8D51D7"
+    ControlStrongFillDisabled = "#667C41C4"
+    ControlStrongStrokeDefault = "#FFE8D7FF"
+    ControlStrongStrokeDisabled = "#667C41C4"
+    DividerStrokeDefault = "#667C41C4"
+    FocusStrokeInner = "#FFF4F4F4"
+    FocusStrokeOuter = "#FF8D51D7"
+    HyperlinkFillDisabled = "#668D51D7"
+    HyperlinkFillPrimary = "#FFC2E7FF"
+    HyperlinkFillSecondary = "#FFE8D7FF"
+    HyperlinkFillTertiary = "#FF9F69E8"
+    LayerFillAlt = "#3327153D"
+    LayerFillDefault = "#4D3A2159"
+    ShadowFlyout = "#66000000"
+    SmokeFillDefault = "#66000000"
+    SmokeFillInverse = "#B2130B1E"
+    SolidBackgroundFillBase = "#FF130B1E"
+    SolidBackgroundFillBaseAlt = "#FF0E0816"
+    SolidBackgroundFillQuaternary = "#FF211335"
+    SolidBackgroundFillQuinary = "#FF2A1841"
+    SolidBackgroundFillSecondary = "#FF160D24"
+    SolidBackgroundFillSenary = "#FF33204F"
+    SolidBackgroundFillTertiary = "#FF1A0F2A"
+    SubtleFillDisabled = "#00000000"
+    SubtleFillSecondary = "#267C41C4"
+    SubtleFillTertiary = "#407C41C4"
+    SubtleFillTransparent = "#00000000"
+    SurfaceBackgroundFillDefault = "#FF1D112D"
+    SurfaceStrokeDefault = "#667C41C4"
+    SurfaceStrokeFlyout = "#994C2C75"
+    SystemFillAttention = "#FF8D51D7"
+    SystemFillAttentionBackground = "#2627153D"
+    SystemFillCaution = "#FFFFD166"
+    SystemFillCautionBackground = "#FF3A2A17"
+    SystemFillCritical = "#FFFF6B8A"
+    SystemFillCriticalBackground = "#FF3A1722"
+    SystemFillNeutral = "#B3F4F4F4"
+    SystemFillNeutralBackground = "#2627153D"
+    SystemFillSolidAttentionBackground = "#FF2A1841"
+    SystemFillSolidNeutral = "#FF9B8AB8"
+    SystemFillSolidNeutralBackground = "#FF24153A"
+    SystemFillSuccess = "#FF6EE7B7"
+    SystemFillSuccessBackground = "#FF16362C"
+    TextFillDisabled = "#66F4F4F4"
+    TextFillPrimary = "#FFF4F4F4"
+    TextFillSecondary = "#D9F4F4F4"
+    TextFillTertiary = "#A6F4F4F4"
+    TextOnAccentFillDisabled = "#B3FFFFFF"
+    TextOnAccentFillPrimary = "#FFFFFFFF"
+    TextOnAccentFillSecondary = "#E6FFFFFF"
+    TextOnAccentFillSelectedText = "#FFFFFFFF"
+}
 
-$shellInternalTokens = @(
-    @{ Name = "EnvironmentBackground"; Background = "#FF130B1E" },
-    @{ Name = "EnvironmentBody"; Background = "#FF130B1E" },
-    @{ Name = "EnvironmentBorder"; Background = "#FF7C41C4" },
-    @{ Name = "EnvironmentHeader"; Background = "#FF1A0F2A" },
-    @{ Name = "EnvironmentHeaderInactive"; Background = "#FF160D24" },
-    @{ Name = "EnvironmentIndicator"; Background = "#997C41C4" },
-    @{ Name = "EnvironmentLayeredBackground"; Background = "#4D3A2159" },
-    @{ Name = "EnvironmentLogo"; Background = "#FF7C41C4" },
-    @{ Name = "EnvironmentTab"; Background = "#FF1D112D" },
-    @{ Name = "EnvironmentTabInactive"; Background = "#FF160D24" }
-)
+$shellInternalTokenColors = [ordered]@{
+    CaptionControlCloseFillPrimary = "#FFC42B1C"
+    CaptionControlCloseFillSecondary = "#E6C42B1C"
+    CaptionControlCloseTextFillPrimary = "#FFFFFFFF"
+    CaptionControlCloseTextFillSecondary = "#B3FFFFFF"
+    EnvironmentBackground = "#FF130B1E"
+    EnvironmentBadge = "#337C41C4"
+    EnvironmentBody = "#FF130B1E"
+    EnvironmentBodyText = "#FFF4F4F4"
+    EnvironmentBorder = "#FF7C41C4"
+    EnvironmentBorderInactive = "#FF3A2159"
+    EnvironmentHeader = "#FF1A0F2A"
+    EnvironmentHeaderInactive = "#FF130B1E"
+    EnvironmentIndicator = "#997C41C4"
+    EnvironmentLayeredBackground = "#4D3A2159"
+    EnvironmentLayeredBorder = "#804C2C75"
+    EnvironmentLogo = "#FF8D51D7"
+    EnvironmentTab = "#FF1D112D"
+    EnvironmentTabInactive = "#FF160D24"
+    StatusBarBackgroundFillBuilding = "#FF5D2F9A"
+    StatusBarBackgroundFillDebugging = "#FF7A2101"
+    StatusBarBackgroundFillRest = "#FF27163C"
+    StatusBarBackgroundFillSolutionLoading = "#FF3A2159"
+    StatusBarControlFillSecondary = "#337C41C4"
+    StatusBarTextFillBuilding = "#FFFFFFFF"
+    StatusBarTextFillDebugging = "#FFFFFFFF"
+    StatusBarTextFillDisabled = "#90FFFFFF"
+    StatusBarTextFillRest = "#FFFFFFFF"
+    StatusBarTextFillSolutionLoading = "#FFFFFFFF"
+}
+
+$shellTokens = @($shellTokenColors.GetEnumerator() | ForEach-Object { @{ Name = $_.Key; Background = $_.Value } })
+$shellInternalTokens = @($shellInternalTokenColors.GetEnumerator() | ForEach-Object { @{ Name = $_.Key; Background = $_.Value } })
 
 function Add-Int32 {
     param(

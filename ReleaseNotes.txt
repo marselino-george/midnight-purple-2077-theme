@@ -1,8 +1,8 @@
-1.1.8
-- Experimental side-by-side VS2026 Lab build; this VSIX uses a separate identity and theme GUID from the public Marketplace package.
-- Adds a Visual Studio 2026 Fluent `Shell` and `ShellInternal` layer using the same 7+10 token shape as the built-in tinted themes.
-- Fixes the generated binary `.pkgdef` length headers so `DeclaredBytes` matches the actual category byte count.
-- Keeps the Visual Studio 2022-compatible legacy theme categories for comparison while testing the VS2026 chrome colors.
+1.1.9
+- Expands the VS2026 Lab shell layer to the full 94-token `Shell` and 28-token `ShellInternal` palette.
+- Adds purple base, surface, control, subtle hover, toolbar/menu, tab, status bar, and shell header colors.
+- Keeps the corrected binary `.pkgdef` length headers validated by `scripts/Update-VS2026ShellLayer.ps1`.
+- Keeps the separate lab VSIX identity so testing does not replace the public Marketplace package.
 
 Credits
 - Original VS Code theme credit belongs to cyber samurai.

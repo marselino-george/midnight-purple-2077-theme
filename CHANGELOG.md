@@ -2,6 +2,12 @@
 
 All notable changes to this project are documented here.
 
+## 1.1.9 - 2026-06-25
+
+- Expanded the experimental VS2026 Lab shell layer from the built-in tinted-theme starter shape to the full 94-token `Shell` and 28-token `ShellInternal` palette.
+- Added purple Fluent base, surface, control, subtle hover, toolbar/menu, tab, status bar, and shell header colors so the top Visual Studio chrome can participate in the theme.
+- Kept the side-by-side lab VSIX identity and theme GUID separate from the public Marketplace package.
+
 ## 1.1.8 - 2026-06-25
 
 - Added an experimental side-by-side `Midnight Purple 2077 VS2026 Lab` package with a separate VSIX identity and theme GUID so it can be tested without replacing the public `1.1.7` Marketplace theme.

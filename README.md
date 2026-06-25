@@ -15,7 +15,7 @@ The VSIX manifest intentionally targets `[17.0,19.0)` so the package supports Vi
 
 This branch builds a lab VSIX with a separate extension identity and theme GUID from the public Marketplace package. It can be installed next to the public `Midnight Purple 2077 Theme` release for testing, and it appears in Visual Studio as `Midnight Purple 2077 VS2026 Lab`.
 
-Visual Studio 2026 uses Fluent `Shell` and `ShellInternal` color tokens for IDE chrome surfaces such as the main window frame, command bars, tabs, buttons, status bar, and tool window headers. This lab build restores those categories using the same 7-token `Shell` and 10-token `ShellInternal` shape used by the built-in VS2026 tinted themes, with corrected binary `.pkgdef` length headers.
+Visual Studio 2026 uses Fluent `Shell` and `ShellInternal` color tokens for IDE chrome surfaces such as the main window frame, command bars, tabs, buttons, status bar, and tool window headers. This lab build now uses the full 94-token `Shell` and 28-token `ShellInternal` palette, with corrected binary `.pkgdef` length headers.
 
 ## Install
 
@@ -66,8 +66,8 @@ After changing the VS2026 chrome palette, regenerate and validate the binary `.p
 The script validates the generated categories before it exits:
 
 ```text
-Shell             7   257
-ShellInternal    10   326
+Shell            94  3091
+ShellInternal    28  1008
 ```
 
 ## Publish From Terminal

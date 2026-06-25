@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="MidnightPurple2077Theme.VS2026Lab.8db7c767-3ded-4c92-befa-c40152c6ac12" Version="1.1.8" Language="en-US" Publisher="Marcelino Jorge Romero" />
+        <Identity Id="MidnightPurple2077Theme.VS2026Lab.8db7c767-3ded-4c92-befa-c40152c6ac12" Version="1.1.9" Language="en-US" Publisher="Marcelino Jorge Romero" />
         <DisplayName>Midnight Purple 2077 VS2026 Lab</DisplayName>
         <Description xml:space="preserve">Experimental side-by-side Visual Studio 2026 chrome color test build for Midnight Purple 2077.</Description>
         <License>LICENSE.txt</License>
